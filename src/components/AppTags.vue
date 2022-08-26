@@ -1,7 +1,7 @@
 <template>
   <ul v-if="tags.length" class="tags reset-list">
-    <li class="tags__item">
-      <app-tag v-for="tag in tags" class="tags__tag" :chain="tag" :key="tag" @close="onClose"/>
+    <li class="tags__item" v-for="tag in tags" :key="tag">
+      <app-tag  class="tags__tag" :chain="tag" @close="onClose"/>
     </li>
   </ul>
 </template>
@@ -34,16 +34,19 @@ export default {
 
 <style lang="scss" scoped>
   .tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
     &__item {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-    }
 
-    &__tag {
       &:not(:last-child) {
         margin-bottom: 10px;
       }
     }
+
   }
 </style>
