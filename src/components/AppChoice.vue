@@ -64,6 +64,11 @@ export default {
       display: inline-block;
       width: 100%;
       max-width: 340px;
+      pointer-events: none;
+
+      & > * {
+        pointer-events: auto;
+      }
     }
 
     &__list {
