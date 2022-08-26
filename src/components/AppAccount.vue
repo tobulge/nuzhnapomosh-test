@@ -2,7 +2,13 @@
   <div class="account">
     <a class="account__link" href="#" aria-label="Перейти в личный кабинет">
       <div class="account__logo-wrap">
-        <img class="account__avatar" src="@/assets/img/avatar.jpg" :alt="`Аватар пользователя ${userName}`">
+        <img
+          class="account__avatar"
+          src="@/assets/img/avatar.jpg"
+          :alt="`Аватар пользователя ${userName}`"
+          width="40"
+          height="40"
+        >
       </div>
       <span class="account__user-name">{{ userName }}</span>
     </a>
@@ -23,42 +29,23 @@ export default {
 
 <style lang="scss" scoped>
   @import "@/scss/variables";
+  @import "@/scss/mixins/underline";
 
   .account {
-    width: 100%;
-    max-width: 300px;
-
     &__link {
       display: inline-flex;
       align-items: center;
-      outline: none;
 
       &:hover {
-        .account {
-          &__user-name {
-            &::after {
-              transform: scaleX(1);
-            }
-          }
-        }
+        @include underline-hover('.account', 'user-name')
       }
 
       &:focus-visible {
-        &:not(:active) {
-          outline: 2px solid $red;
-          outline-offset: 5px;
-        }
+        @include underline-focus;
       }
 
       &:active {
-        .account {
-          &__user-name {
-            color: $gray;
-            &::after {
-              background-color: $gray;
-            }
-          }
-        }
+        @include underline-active;
       }
     }
 
@@ -77,17 +64,18 @@ export default {
     &__user-name {
       position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: $red;
-        transform-origin: left;
-        transform: scaleX(0);
-        transition: transform .3s ease;
+      @include underline
+    }
+
+    @media (max-width: $mobile) {
+      &__logo-wrap {
+        width: 30px;
+        height: 30px;
+        margin-right: 0;
+      }
+
+      &__user-name {
+        display: none;
       }
     }
   }

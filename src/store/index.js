@@ -1,14 +1,10 @@
 import { createStore } from 'vuex'
+import request from './modules/request.module'
+import checked from './modules/checked.module'
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    categories: request,
+    checked
   }
 })

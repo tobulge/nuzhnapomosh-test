@@ -1,12 +1,19 @@
-/* Fonts */
 $default-fs: 20px;
 $default-ff: 'Futura', Arial, sans-serif;
 
-/* Sizes */
 $min-screen: 320px;
 $max-screen: 1920px;
+$desktop-min: 1700px;
+$tablet-big: 1280px;
+$tablet-small: 1000px;
+$mobile: 610px;
 
-/* Colors */
-$light-gray: #FAFAFA;
-$red: #E65639;
-$gray: gray;
+$dark: #302f2d;
+$white: #ffffff;
+$light-gray: #fafafa;
+$middle-gray: #999999;
+$red: #e65639;
+$red-hover: #d13924;
+$gray: #e6e6e6;
+$dark-gray: #919191;
+$light-green: #eaf3db;

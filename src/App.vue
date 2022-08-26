@@ -1,16 +1,17 @@
 <template>
-  <the-header/>
-  <app-page title="Создание сбора"/>
+  <inner-layout/>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader'
-import AppPage from '@/components/ui/AppPage'
+import InnerLayout from '@/layout/InnerLayout'
 
 export default {
+  setup () {
+
+  },
+
   components: {
-    TheHeader,
-    AppPage
+    InnerLayout
   }
 }
 </script>

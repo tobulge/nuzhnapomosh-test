@@ -19,9 +19,54 @@ body {
   min-width: $min-screen;
   font-family: $default-ff;
   font-size: $default-fs;
+  color: $dark;
+  background-color: $white;
 }
 
 .container {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.reset-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+.reset-default-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.reset-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+@media (max-width: $mobile) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

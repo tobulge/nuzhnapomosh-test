@@ -1,0 +1,18 @@
+@mixin scrollbar {
+  /* Works on Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: $red $gray;
+
+  /* Works on Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $red;
+  }
+}
