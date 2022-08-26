@@ -34,6 +34,8 @@ export default {
       justify-content: center;
       padding-top: 0;
       padding-bottom: 0;
+      border-right: none;
+      border-bottom: 1px solid $gray;
 
       &__btn {
         width: auto;

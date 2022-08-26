@@ -74,6 +74,7 @@ export default {
   @import "@/scss/variables";
 
   .form {
+    max-width: 1440px;
     padding: 42px 65px 65px;
     border-radius: 10px;
     border: 1px solid $gray;
@@ -130,6 +131,9 @@ export default {
     }
 
     @media (max-width: $mobile) {
+      padding-left: 20px;
+      padding-right: 20px;
+
       &__title {
         margin-bottom: 20px;
         font-size: 20px;

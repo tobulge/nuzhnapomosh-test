@@ -59,6 +59,8 @@ export default {
 
     &__avatar {
       display: block;
+      width: 100%;
+      height: auto;
      }
 
     &__user-name {

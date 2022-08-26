@@ -126,5 +126,11 @@ export default {
         }
       }
     }
+
+    @media (max-width: $mobile) {
+      &__item {
+        font-size: 14px;
+      }
+    }
   }
 </style>

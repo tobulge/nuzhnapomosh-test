@@ -66,5 +66,10 @@ export default {
       background-color: $white;
       outline: none;
     }
+
+    @media (max-width: $mobile) {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
   }
 </style>
