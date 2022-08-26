@@ -40,10 +40,12 @@ export default {
     margin-bottom: -10px;
 
     &__item {
-      display: inline-block;
+      display: inline-flex;
       align-items: center;
       margin-bottom: 10px;
-      padding: 8px 15px;
+      padding: 7px 15px 8px;
+      font-size: 20px;
+      line-height: 25 / 20 * 100%;
       background-color: $light-gray;
 
       &:first-child {
@@ -67,7 +69,6 @@ export default {
 
         &::after {
           content: "";
-          display: inline-block;
           width: 10px;
           height: 10px;
           background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.73333H9' stroke='%23999999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.2666 8.46667L8.99993 4.73333L5.2666 1' stroke='%23999999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -76,11 +77,6 @@ export default {
           background-position: center;
         }
       }
-    }
-
-    &__text,
-    &__close-btn {
-      vertical-align: middle;
     }
 
     &__text {
@@ -92,6 +88,7 @@ export default {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0  ;
       width: 20px;
       height: 20px;
       border-radius: 50%;
