@@ -6,6 +6,11 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 img {
   max-width: 100%;
 }

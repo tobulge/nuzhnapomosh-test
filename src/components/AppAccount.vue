@@ -32,6 +32,9 @@ export default {
   @import "@/scss/mixins/underline";
 
   .account {
+    display: flex;
+    flex-wrap: wrap;
+
     &__link {
       display: inline-flex;
       align-items: center;
